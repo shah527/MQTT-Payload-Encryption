@@ -1,2 +1,2 @@
 # MQTT-Payload-Encryption
-MQTT Payload Encryption using AES and ChaChaPoly
+MQTT Payload Encryption using AES-128 CBC and ChaCha20-Poly1305
