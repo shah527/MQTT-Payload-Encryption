@@ -12,3 +12,6 @@ Libraries used:
 - [ChaChaPolyHelper](https://github.com/dmaixner/esp8266-chachapoly)
 - [AES](https://github.com/spaniakos/AES/)
 - [base64](https://github.com/fcgdam/ESP8266-base64)
+
+Broker:
+- [mosquitto](https://mosquitto.org/)
