@@ -5,6 +5,7 @@ MQTT Payload Encryption using AES-128 CBC and ChaCha20-Poly1305 for NodeMCU (ESP
 <b>Libraries used:</b>
 
 - [Crypto](https://github.com/rweather/arduinolibs)
+- [Node Crypto](https://github.com/nodejs/node/blob/main/doc/api/crypto.md)
 - [PubSubClient](https://github.com/knolleary/pubsubclient)
 - [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 - [paho.mqtt](https://github.com/eclipse/paho.mqtt.python)
