@@ -1,6 +1,6 @@
 ## <b>MQTT-Payload-Encryption</b>
 
-MQTT Payload Encryption using AES-128 CBC and ChaCha20-Poly1305 for NodeMCU (ESP8266) with NodeJS decrypting script (runs from command) and Python MQTT client (stores locally).
+MQTT Payload Encryption using AES-128 CBC and XChaCha20 for NodeMCU (ESP8266) with NodeJS decrypting script (runs from command) and Python MQTT client (stores locally).
 
 <b>Libraries used:</b>
 
