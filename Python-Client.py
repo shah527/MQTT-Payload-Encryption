@@ -2,7 +2,7 @@ import random
 
 from paho.mqtt import client as mqtt_client
 
-broker = '149.162.184.124'  # MQTT broker ip address
+broker = 'ipaddress'  # MQTT broker ip address
 port = 1883
 topic = "test"
 client_id = f'python-mqtt-{random.randint(0, 100)}'  # Randomly generated client ID
