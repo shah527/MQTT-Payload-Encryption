@@ -7,11 +7,11 @@ XChaCha20 = []
 trials = []
 for i in range(1000):
     # runs command like `node filename.js input`
-    a = subprocess.run([r'node', r'decrypt.js',
+    a = subprocess.run(['node', 'decrypt.js',
                         'eyJkYXRhIjpbIlBscitxREFLcit4WUJ5Q2NTYkVIQTYyWnBBR2dDd3RhZm1qRlk0M3l0MVUrdkJrSHJJYmJ3RjgxNUIvV3lZUThEUXhvQ2k5WldXNUcwRE1qQWUvMHdRRWdYOUxxU3lkVXV5ZExiMzFJRjU0PSIsIlFVSkRSRVZHUjBGQ1EwUkZSa2RCUWc9PSJdfQ=='],
                        capture_output=True, text=True).stdout.strip(
         "this is a longer message being tested abcdefghijklmnopqrstuvwxyz\n")  # strips the plaintext output to read numberical data only
-    c = subprocess.run(['node', r'chachafinal.js',
+    c = subprocess.run(['node', 'chachafinal.js',
                         'eyJkYXRhIjpbImN4WHU3Ym92bEo3dEZHbEY2aUpHUytpenp4RmVxaWV4Z1BVK0pVaXAiLCJCY3JFeDJpUVA3dVZFRHlCNFRpSk1pckRTM05QWnJmdyJdfQ=='],
                        capture_output=True, text=True).stdout.strip(
         "this is a longer message being tested abcdefghijklmnopqrstuvwxyz\n")  # strips the plaintext output to read numberical data only
