@@ -46,6 +46,8 @@ plt.plot(trials, [Average(XChaCha20) for x in XChaCha20], color="brown", label='
 plt.plot(trials, [Average(AES) for x in AES], color="red", label='Average Time: AES', linestyle='--')
 plt.xlabel("Order of Trials", fontsize=9)
 plt.ylabel("Time (ms)", fontsize=9)
+plt.ylim(10.5,14.5)
 plt.legend(loc='upper left', prop={'size': 6})
 plt.show()
+
 # plt.savefig('foo.png',edgecolor='RED',transparent=False)
