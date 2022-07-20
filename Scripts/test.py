@@ -5,13 +5,13 @@ import matplotlib.ticker
 AES = []
 XChaCha20 = []
 trials = []
-for i in range(1000):
+for i in range(10):
     # runs command like `node filename.js input`
-    a = subprocess.run(['node', 'decrypt.js',
+    a = subprocess.run(['node', 'D:\GitHub\MQTT-Payload-Encryption\Decryption\AES.js',
                         'eyJkYXRhIjpbIlBscitxREFLcit4WUJ5Q2NTYkVIQTYyWnBBR2dDd3RhZm1qRlk0M3l0MVUrdkJrSHJJYmJ3RjgxNUIvV3lZUThEUXhvQ2k5WldXNUcwRE1qQWUvMHdRRWdYOUxxU3lkVXV5ZExiMzFJRjU0PSIsIlFVSkRSRVZHUjBGQ1EwUkZSa2RCUWc9PSJdfQ=='],
                        capture_output=True, text=True).stdout.strip(
         "this is a longer message being tested abcdefghijklmnopqrstuvwxyz\n")  # strips the plaintext output to read numberical data only
-    c = subprocess.run(['node', 'chachafinal.js',
+    c = subprocess.run(['node', 'D:\GitHub\MQTT-Payload-Encryption\Decryption\XChaCha20.js',
                         'eyJkYXRhIjpbImN4WHU3Ym92bEo3dEZHbEY2aUpHUytpenp4RmVxaWV4Z1BVK0pVaXAiLCJCY3JFeDJpUVA3dVZFRHlCNFRpSk1pckRTM05QWnJmdyJdfQ=='],
                        capture_output=True, text=True).stdout.strip(
         "this is a longer message being tested abcdefghijklmnopqrstuvwxyz\n")  # strips the plaintext output to read numberical data only
@@ -42,8 +42,8 @@ ax.scatter(trials, XChaCha20, color="black", label='Execution Time: XChaCha20', 
 ax.scatter(trials, AES, color="orange", label="Execution Time: AES", s=2)
 ax.yaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter("{x:.4f}"))
 plt.title("Performance Test Comparison", fontsize=12)
-plt.plot(trials, Average(XChaCha20), color="brown", label='Average Time: XChaCha20', linestyle='--')
-plt.plot(trials, Average(AES), color="red", label='Average Time: AES', linestyle='--')
+plt.plot(trials, [Average(XChaCha20) for x in XChaCha20], color="brown", label='Average Time: XChaCha20', linestyle='--')
+plt.plot(trials, [Average(AES) for x in AES], color="red", label='Average Time: AES', linestyle='--')
 plt.xlabel("Order of Trials", fontsize=9)
 plt.ylabel("Time (ms)", fontsize=9)
 plt.legend(loc='upper left', prop={'size': 6})
