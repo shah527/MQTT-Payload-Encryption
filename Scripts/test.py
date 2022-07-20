@@ -5,7 +5,7 @@ import matplotlib.ticker
 AES = []
 XChaCha20 = []
 trials = []
-for i in range(10):
+for i in range(1000):
     # runs command like `node filename.js input`
     a = subprocess.run(['node', 'D:\GitHub\MQTT-Payload-Encryption\Decryption\AES.js',
                         'eyJkYXRhIjpbIlBscitxREFLcit4WUJ5Q2NTYkVIQTYyWnBBR2dDd3RhZm1qRlk0M3l0MVUrdkJrSHJJYmJ3RjgxNUIvV3lZUThEUXhvQ2k5WldXNUcwRE1qQWUvMHdRRWdYOUxxU3lkVXV5ZExiMzFJRjU0PSIsIlFVSkRSRVZHUjBGQ1EwUkZSa2RCUWc9PSJdfQ=='],
